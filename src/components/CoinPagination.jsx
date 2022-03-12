@@ -19,18 +19,15 @@ const CoinPagination = ({ setPagina, pagina }) => {
       <ul className="pagination justify-content-center">
         <li className={pagina === 0 ? "page-item disabled" : "page-item"}>
           <button className="page-link" onClick={prevPage}>
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <i className="fa fa-chevron-left" aria-hidden="true"></i>
           </button>
         </li>
         {paginacion.map((pag, index) => (
-          <li className={index === pagina ? "page-item active" : "page-item"}>
-            <button
-              className="page-link"
-              onClick={() => {
-                console.log(pag);
-                setPagina(index);
-              }}
-            >
+          <li
+            key={index}
+            className={index === pagina ? "page-item active" : "page-item"}
+          >
+            <button className="page-link" onClick={() => setPagina(index)}>
               {pag}
             </button>
           </li>
@@ -38,7 +35,7 @@ const CoinPagination = ({ setPagina, pagina }) => {
 
         <li className={pagina === 9 ? "page-item disabled" : "page-item"}>
           <button className="page-link" onClick={nextPage}>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <i className="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
         </li>
       </ul>

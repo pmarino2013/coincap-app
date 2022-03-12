@@ -10,3 +10,10 @@ export const getCoins = async (pagina = 0) => {
     console.error(error);
   }
 };
+
+export const getCoinId = async (id) => {
+  const resp = await fetch(`https://api.coincap.io/v2/assets/${id}`);
+  const { data } = await resp.json();
+
+  return data;
+};

@@ -2,6 +2,8 @@ import React from "react";
 import CoinIcon from "./CoinIcon";
 import numeral from "numeral";
 
+import { Link } from "react-router-dom";
+
 import { Table } from "react-bootstrap";
 
 const CoinTable = ({ datos, update, setUpdate }) => {
@@ -29,8 +31,9 @@ const CoinTable = ({ datos, update, setUpdate }) => {
             <td className="text-center">{coin.rank}</td>
             <td className="d-flex  justify-content-between">
               <CoinIcon symbol={coin.symbol} />
-
-              <span className="ms-2">{coin.name}</span>
+              <Link className="nav-link" to={`coin/${coin.id}`}>
+                <span className="ms-2">{coin.name}</span>
+              </Link>
             </td>
             <td>{numeral(coin.priceUsd).format("$0,0.00")}</td>
             <td>{numeral(coin.marketCapUsd).format("($ 0.00 a)")}</td>
