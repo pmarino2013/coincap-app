@@ -39,9 +39,11 @@ body {
   text-align: left;
 }
 
-.img-icon {
+.icon img {
   width: 40px;
 }
+/* .img-icon {
+} */
 
 .card-login {
   display: flex;
@@ -52,4 +54,14 @@ body {
 
 .card-login img {
   width: 100px;
+}
+.logo-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-icon img {
+  width: 150px;
+  height: 150px;
 }

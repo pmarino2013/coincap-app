@@ -13,7 +13,7 @@ const LoginGoogle = () => {
     if (response?.error) {
       console.warn("Se cancelo inicio de sesión");
     } else {
-      console.log("Inicio de sesión con éxito :)");
+      // console.log("Inicio de sesión con éxito :)");
       localStorage.setItem("auth", JSON.stringify(response.profileObj));
       navigate("/");
     }

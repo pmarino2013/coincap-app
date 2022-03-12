@@ -20,7 +20,6 @@ const Home = () => {
 
   useEffect(() => {
     getCoins(pagina).then((respuesta) => {
-      console.log(respuesta);
       setCoins({
         loading: false,
         datos: respuesta.data,

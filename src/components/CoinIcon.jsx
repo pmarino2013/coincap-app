@@ -5,7 +5,7 @@ const CoinIcon = ({ symbol }) => {
     <>
       <img
         src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`}
-        className="img-icon"
+        // className="img-icon"
         alt={symbol}
       />
     </>

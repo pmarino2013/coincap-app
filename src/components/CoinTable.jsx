@@ -30,7 +30,9 @@ const CoinTable = ({ datos, update, setUpdate }) => {
           <tr key={coin.id}>
             <td className="text-center">{coin.rank}</td>
             <td className="d-flex  justify-content-between">
-              <CoinIcon symbol={coin.symbol} />
+              <div className="icon">
+                <CoinIcon symbol={coin.symbol} />
+              </div>
               <Link className="nav-link" to={`coin/${coin.id}`}>
                 <span className="ms-2">{coin.name}</span>
               </Link>

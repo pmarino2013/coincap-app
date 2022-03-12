@@ -1,23 +1,23 @@
 import React from "react";
 
 const CoinPagination = ({ setPagina, pagina }) => {
-  const paginacion = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const paginacion = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const nextPage = () => {
-    if (pagina < 9) {
-      setPagina(pagina + 1);
+    if (pagina < 90) {
+      setPagina(pagina + 10);
     }
   };
 
   const prevPage = () => {
-    if (pagina > 0) {
-      setPagina(pagina - 1);
+    if (pagina >= 10) {
+      setPagina(pagina - 10);
     }
   };
   return (
     <nav>
       <ul className="pagination justify-content-center">
-        <li className={pagina === 0 ? "page-item disabled" : "page-item"}>
+        <li className={pagina < 10 ? "page-item disabled" : "page-item"}>
           <button className="page-link" onClick={prevPage}>
             <i className="fa fa-chevron-left" aria-hidden="true"></i>
           </button>
@@ -25,15 +25,15 @@ const CoinPagination = ({ setPagina, pagina }) => {
         {paginacion.map((pag, index) => (
           <li
             key={index}
-            className={index === pagina ? "page-item active" : "page-item"}
+            className={pag * 10 === pagina ? "page-item active" : "page-item"}
           >
             <button className="page-link" onClick={() => setPagina(index)}>
-              {pag}
+              {pag + 1}
             </button>
           </li>
         ))}
 
-        <li className={pagina === 9 ? "page-item disabled" : "page-item"}>
+        <li className={pagina === 90 ? "page-item disabled" : "page-item"}>
           <button className="page-link" onClick={nextPage}>
             <i className="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
