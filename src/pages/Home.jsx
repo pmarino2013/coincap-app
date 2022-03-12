@@ -42,7 +42,7 @@ const Home = () => {
                   update={update}
                   setUpdate={setUpdate}
                 />
-                <CoinPagination />
+                <CoinPagination setPagina={setPagina} pagina={pagina} />
               </>
             )}
           </div>

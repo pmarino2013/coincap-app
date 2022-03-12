@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import LoginScreen from "./pages/LoginScreen";
 import ProtectRoutes from "./routes/ProtectRoutes";
 
+import "font-awesome/css/font-awesome.css";
 const App = () => {
   return (
     <BrowserRouter>
