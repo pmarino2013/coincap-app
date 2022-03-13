@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/coincap.png";
+import CoinSearch from "./CoinSearch";
 const CoinNav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -11,6 +12,7 @@ const CoinNav = () => {
           </Link>
         </div>
         <ul className="navbar-nav mb-2 mb-lg-0">
+          <CoinSearch />
           <li className="nav-item">
             <Link className="nav-link active" to="/login">
               Cerrar sesión

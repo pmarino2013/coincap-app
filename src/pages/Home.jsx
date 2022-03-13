@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { getCoins } from "../helpers/coinFetch";
+import { getCoins, SearchCoinByName } from "../helpers/coinFetch";
 
 // import { Table } from "react-bootstrap";
 // import CoinNav from "../components/CoinNav";
@@ -36,6 +36,7 @@ const Home = () => {
               <h3 className="text-center text-white">Cargando data...</h3>
             ) : (
               <>
+                {/* <SearchCoinByName /> */}
                 <CoinTable
                   datos={datos}
                   update={update}
