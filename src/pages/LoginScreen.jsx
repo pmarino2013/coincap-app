@@ -1,4 +1,5 @@
 import React from "react";
+
 import LoginGoogle from "../components/LoginGoogle";
 import logo from "../img/coincap.png";
 

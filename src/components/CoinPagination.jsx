@@ -27,7 +27,7 @@ const CoinPagination = ({ setPagina, pagina }) => {
             key={index}
             className={pag * 10 === pagina ? "page-item active" : "page-item"}
           >
-            <button className="page-link" onClick={() => setPagina(index)}>
+            <button className="page-link" onClick={() => setPagina(pag * 10)}>
               {pag + 1}
             </button>
           </li>

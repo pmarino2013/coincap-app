@@ -31,7 +31,7 @@ const Home = () => {
     <>
       <div className="container">
         <div className="row mt-5">
-          <div className="col-12 ">
+          <div className="col-12 col-md-10 offset-md-1">
             {loading ? (
               <h3 className="text-center text-white">Cargando data...</h3>
             ) : (
