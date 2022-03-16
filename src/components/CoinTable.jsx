@@ -33,7 +33,7 @@ const CoinTable = ({ datos, update, setUpdate }) => {
               <div className="icon">
                 <CoinIcon symbol={coin.symbol} />
               </div>
-              <Link className="nav-link" to={`coin/${coin.id}`}>
+              <Link className="nav-link" to={`/coin/${coin.id}`}>
                 <span className="ms-2">{coin.name}</span>
               </Link>
             </td>
