@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { getCoins, SearchCoinByName } from "../helpers/coinFetch";
+import { getCoins } from "../helpers/coinFetch";
 
 // import { Table } from "react-bootstrap";
 // import CoinNav from "../components/CoinNav";
