@@ -9,6 +9,7 @@ const LoginGoogle = () => {
 
   let navigate = useNavigate();
   const responseGoogle = (response) => {
+    console.log(response);
     // console.log(response.profileObj);
     if (response?.error) {
       console.warn("Se cancelo inicio de sesión");
