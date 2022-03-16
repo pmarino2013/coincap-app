@@ -25,6 +25,7 @@ const LoginGoogle = () => {
       clientId="877760850378-q81jlodd8ftkpmni94p679p3p8i1v8re.apps.googleusercontent.com"
       buttonText="Iniciar sesión con Google"
       onSuccess={responseGoogle}
+      isSignedIn={true}
       onFailure={responseGoogle}
       cookiePolicy={"single_host_origin"}
     />
