@@ -14,6 +14,7 @@ const CoinSearch = () => {
   useEffect(() => {
     if (inputValue) {
       SearchCoinByName(inputValue).then((response) => {
+        console.log(response);
         setOptions(response);
       });
     }

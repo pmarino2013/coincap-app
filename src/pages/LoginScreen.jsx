@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import LoginGoogle from "../components/LoginGoogle";
 import logo from "../img/coincap.png";
 
 const LoginScreen = () => {
+  useEffect(() => {
+    localStorage.removeItem("auth");
+  }, []);
   return (
     <div className="container">
       <div className="row card-login">

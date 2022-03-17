@@ -8,7 +8,7 @@ const ProtectRoutes = ({ children }) => {
     <>
       <CoinNav />
 
-      {isAuth ? children : <Navigate to="/login" />}
+      {isAuth ? children : <Navigate to="login" />}
     </>
   );
 };

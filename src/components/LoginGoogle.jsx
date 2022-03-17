@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 
 const LoginGoogle = () => {
-  useEffect(() => {
-    localStorage.removeItem("auth");
-  }, []);
-
   let navigate = useNavigate();
+
   const responseGoogle = (response) => {
     console.log(response);
     // console.log(response.profileObj);
@@ -25,7 +22,6 @@ const LoginGoogle = () => {
       clientId="877760850378-q81jlodd8ftkpmni94p679p3p8i1v8re.apps.googleusercontent.com"
       buttonText="Iniciar sesión con Google"
       onSuccess={responseGoogle}
-      isSignedIn={true}
       onFailure={responseGoogle}
       cookiePolicy={"single_host_origin"}
     />

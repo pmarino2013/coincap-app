@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../img/coincap.png";
 import CoinSearch from "./CoinSearch";
 const CoinNav = () => {
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState({});
+
   useEffect(() => {
     setAvatar(JSON.parse(localStorage.getItem("auth")));
   }, []);

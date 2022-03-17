@@ -19,10 +19,14 @@ export const getCoinId = async (id) => {
 };
 
 export const SearchCoinByName = async (termino) => {
-  const resp = await fetch(
-    `https://api.coincap.io/v2/assets?search=${termino}&limit=10`
-  );
-  const { data } = await resp.json();
+  try {
+    const resp = await fetch(
+      `https://api.coincap.io/v2/assets?search=${termino}&limit=10`
+    );
+    const { data } = await resp.json();
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
